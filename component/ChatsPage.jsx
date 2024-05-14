@@ -1,6 +1,9 @@
 import {PrettyChatWindow} from 'react-chat-engine-pretty'
 
 const ChatsPage = (props) => {
+const sendMessageToServer = async (message) => {
+  await axios.post('http://localhost:3001/store-message', message);
+};
 
   return (
     <div style={{height:'100vh'}}>
